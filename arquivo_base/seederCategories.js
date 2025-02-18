@@ -1,16 +1,16 @@
 [
   {
-    titulo: "Tecnologia",
+    name_category: "Tecnologia",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    titulo: "Esportes",
+    name_category: "Esportes",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    titulo: "Entretenimento",
+    name_category: "Entretenimento",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
