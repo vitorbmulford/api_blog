@@ -32,7 +32,7 @@ Esse modelo é para um sistema de blog que permite a criação de posts (artigos
         user_id: Relacionamento com a tabela pessoas, indicando quem fez o comentário.
         post_id: Relacionamento com a tabela posts, para saber a qual post o comentário pertence.
         content: O texto do comentário.
-
+ 
     Para que serve?: Os comentários são a interação direta dos leitores com o conteúdo. Essa tabela armazena os comentários dos posts, permitindo que o sistema exiba, por exemplo, "todos os comentários de um post específico".
 
 4. categorias (Categorias para os Posts)
