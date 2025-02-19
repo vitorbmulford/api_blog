@@ -11,12 +11,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       PostCategory.belongsTo(models.Post, {
         foreignKey: "post_id",
-      }),
-        PostCategory.belongsTo(models.Category, {
-          foreignKey: "category_id",
-        });
+      });
+      PostCategory.belongsTo(models.Category, {
+        foreignKey: "category_id",
+      });
     }
   }
+
   PostCategory.init(
     {
       post_id: {
@@ -39,9 +40,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "PostCategory",
-      tableName: "posts_categories", // Nome da tabela de junção
+      tableName: "post_categories", // Nome da tabela de junção, ajustado para o nome correto
       timestamps: false, // Normalmente não usamos timestamps em tabelas de junção
     }
   );
+
   return PostCategory;
 };

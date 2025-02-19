@@ -9,16 +9,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Comment.belongsTo(models.User, {
-        foreignKey: "users_id",
+        foreignKey: "user_id",
       });
       Comment.belongsTo(models.Post, {
-        foreignKey: "posts_id",
+        foreignKey: "post_id",
       });
     }
   }
   Comment.init(
     {
       comment_content: DataTypes.STRING,
+      post_id: DataTypes.INTEGER,
     },
     {
       sequelize,
