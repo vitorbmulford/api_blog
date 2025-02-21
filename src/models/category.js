@@ -8,9 +8,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Uma categoria pode ter muitos posts (muitos-para-muitos)
       Category.belongsToMany(models.Post, {
-        through: "PostCategory", // Tabela de junção
+        through: "PostCategory", 
         foreignKey: "category_id",
       });
     }

@@ -4,7 +4,8 @@ const users = require("./usersRoutes.js");
 const posts = require("./postsRoutes.js");
 const categories = require("./categoriesRoutes.js");
 const comments = require("./commentsRoutes.js");
+const postCategory = require("./postsCategoryRoutes.js");
 
 module.exports = (app) => {
-  app.use(express.json(), users, posts, categories, comments);
+  app.use(express.json(), users, posts, categories, comments, postCategory);
 };

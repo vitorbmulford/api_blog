@@ -24,24 +24,24 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: "posts", // Nome da tabela de posts
-          key: "id", // Chave primária da tabela posts
+          model: "posts", 
+          key: "id", 
         },
       },
       category_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: "categories", // Nome da tabela de categories
-          key: "id", // Chave primária da tabela categories
+          model: "categories", 
+          key: "id", 
         },
       },
     },
     {
       sequelize,
       modelName: "PostCategory",
-      tableName: "post_categories", // Nome da tabela de junção, ajustado para o nome correto
-      timestamps: false, // Normalmente não usamos timestamps em tabelas de junção
+      tableName: "posts_categories", 
+      timestamps: true, 
     }
   );
 

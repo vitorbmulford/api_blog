@@ -2,7 +2,6 @@ class Controller {
   constructor(entityService) {
     this.entityService = entityService;
   }
-  // No método getAll do seu Controller
   async getAll(req, res) {
     try {
       const listOfRecord = await this.entityService.getAllRecords();

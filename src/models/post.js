@@ -11,9 +11,8 @@ module.exports = (sequelize, DataTypes) => {
       Post.hasMany(models.Comment, {
         foreignKey: "post_id",
       });
-      // Um post pertence a muitas categorias (muitos-para-muitos)
       Post.belongsToMany(models.Category, {
-        through: "PostCategory", // Tabela de junção
+        through: "PostCategory", 
         foreignKey: "post_id",
       });
     }

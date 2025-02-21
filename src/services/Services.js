@@ -7,7 +7,7 @@ class Services {
 
   async getAllRecords() {
     const records = await dataSouce[this.model].findAll();
-    return records.map((record) => record.toJSON()); 
+    return records.map((record) => record.toJSON());
   }
 
   async getRecordById(id) {
@@ -15,7 +15,18 @@ class Services {
   }
 
   async createRecord(dataOfRecord) {
-    return dataSouce[this.model].create(dataOfRecord);
+    try {
+      return await dataSouce[this.model].create(dataOfRecord);
+    } catch (error) {
+      if (error.errors) {
+        throw new Error(
+          "Erro de validação: " + error.errors.map((e) => e.message).join(", ")
+        );
+      } else {
+        console.error("Erro inesperado:", error);
+        throw new Error("Erro inesperado ao criar o registro.");
+      }
+    }
   }
 
   async updateRecord(dataUptade, id) {
@@ -28,7 +39,6 @@ class Services {
     return true;
   }
 
-  // Método deleteRecord "cru"
   async deleteRecord(id) {
     try {
       const result = await dataSouce[this.model].destroy({
