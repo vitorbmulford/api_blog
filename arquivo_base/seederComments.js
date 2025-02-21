@@ -7,15 +7,15 @@
     updatedAt: new Date(),
   },
   {
-    user_id: 3, // Carlos Souza
-    post_id: 2, // Copa do Mundo 2026
+    user_id: 4, // Carlos Souza
+    post_id: 4, // Copa do Mundo 2026
     comment_content: "Torcendo para o Brasil ganhar!",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    user_id: 1, // João Silva
-    post_id: 3, // Filmes de 2025
+    user_id: 1, 
+    post_id: 4, 
     comment_content: "Quais filmes vocês estão esperando?",
     createdAt: new Date(),
     updatedAt: new Date(),

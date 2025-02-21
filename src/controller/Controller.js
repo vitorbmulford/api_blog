@@ -2,6 +2,7 @@ class Controller {
   constructor(entityService) {
     this.entityService = entityService;
   }
+  // No método getAll do seu Controller
   async getAll(req, res) {
     try {
       const listOfRecord = await this.entityService.getAllRecords();
@@ -12,6 +13,7 @@ class Controller {
         .json({ message: "Erro ao buscar registros", error: error.message });
     }
   }
+
   async takeOneById(req, res) {
     const { id } = req.params;
     try {
@@ -66,7 +68,7 @@ class Controller {
     const { id } = req.params;
     try {
       await this.entityService.deleteRecord(Number(id));
-      
+
       return res.status(200).json({ mensagem: `id ${id} deleted` });
     } catch (error) {
       console.error("Erro ao deletar o registro:", error);

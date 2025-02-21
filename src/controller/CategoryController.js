@@ -1,11 +1,11 @@
 const Controller = require("./Controller.js");
-const CommentServices = require("../services/CommentServices.js");
+const CategoryServices = require("../services/CategoryServices.js");
 
-const commentServices = new CommentServices();
+const categoryServices = new CategoryServices();
 
-class CommentController extends Controller {
+class CategoryController extends Controller {
   constructor() {
-    super(commentServices);
+    super(categoryServices);
   }
 }
-module.exports = CommentController;
+module.exports = CategoryController;
