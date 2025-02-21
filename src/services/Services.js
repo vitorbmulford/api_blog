@@ -5,10 +5,9 @@ class Services {
     this.model = nameOfModel;
   }
 
-  // No método getAllRecords do seu Service
   async getAllRecords() {
     const records = await dataSouce[this.model].findAll();
-    return records.map((record) => record.toJSON()); // Garante que seja convertido para JSON
+    return records.map((record) => record.toJSON()); 
   }
 
   async getRecordById(id) {
