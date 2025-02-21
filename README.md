@@ -88,11 +88,10 @@ Passos de Instalação
 
     Clone o repositório:
 
-git clone https://github.com/your-username/your-project.git
-
+git clone https://github.com/vitorbmulford/api_blog
 Instale as dependências:
 
-cd your-project
+cd api_blog
 npm install
 
 Configure a conexão com o banco de dados:
@@ -119,13 +118,13 @@ Endpoints da API
 A API oferece os seguintes endpoints para interagir com o sistema:
 Pessoas
 
-    GET /pessoas
+    GET /users
     Retorna todos os usuários.
-    POST /pessoas
+    POST /users
     Cria um novo usuário.
-    PUT /pessoas/:id
+    PUT /users/:id
     Atualiza os dados de um usuário existente.
-    DELETE /pessoas/:id
+    DELETE /users/:id
     Remove um usuário.
 
 Posts
@@ -143,27 +142,27 @@ Posts
 
 Comentários
 
-    GET /posts/:postId/comentarios
+    GET /posts/:postId/comment
     Lista todos os comentários de um post.
-    POST /posts/:postId/comentarios
+    POST /posts/:postId/comment
     Adiciona um comentário a um post.
-    PUT /comentarios/:id
+    PUT /comment/:id
     Atualiza um comentário.
-    DELETE /comentarios/:id
+    DELETE /comment/:id
     Remove um comentário.
 
 Categorias
 
-    GET /categorias
+    GET /category
     Retorna todas as categorias.
-    POST /categorias
+    POST /category
     Cria uma nova categoria.
-    PUT /categorias/:id
+    PUT /category/:id
     Atualiza uma categoria.
-    DELETE /categorias/:id
+    DELETE /category/:id
     Remove uma categoria.
 
-    Nota: A associação entre posts e categorias é gerenciada através da tabela post_categorias, que pode ser manipulada via endpoints específicos ou de forma automática ao criar/atualizar um post.
+    Nota: A associação entre posts e categorias é gerenciada através da tabela post_categories, que pode ser manipulada via endpoints específicos ou de forma automática ao criar/atualizar um post.
 
 Testes
 
@@ -178,28 +177,6 @@ Executar os testes:
 npm test
 
 Contribuição
-
-Contribuições são sempre bem-vindas! Siga estes passos para colaborar:
-
-    Fork do repositório
-    Crie uma branch para sua feature:
-
-git checkout -b feature/nome-da-sua-feature
-
-Realize suas alterações e faça commit:
-
-git commit -am 'Adiciona nova feature'
-
-Envie sua branch para o repositório remoto:
-
-    git push origin feature/nome-da-sua-feature
-
-    Abra um Pull Request para revisão.
-
-Licença
-
-Este projeto está licenciado sob a MIT License.
-Considerações Finais
 
 Este repositório foi desenvolvido para servir como uma base de estudo sobre a criação de sistemas de blog utilizando Node.js, Express e Sequelize. O modelo de banco de dados, com suas entidades e relacionamentos, é simples, mas poderoso, e pode ser facilmente adaptado e expandido para atender a novos requisitos e funcionalidades.
 
